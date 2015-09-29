@@ -53,6 +53,11 @@ namespace NotePad_WPF
         private void MenuItem_Save_Click(object sender, RoutedEventArgs e)
         {
 
+
+
+
+
+
         }
 
         private void MenuItem_Exit_Click(object sender, RoutedEventArgs e)
@@ -61,6 +66,11 @@ namespace NotePad_WPF
         }
 
         private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
+        }
+
+        private void MenutItem_SaveAs_Click(object sender, RoutedEventArgs e)
         {
 
         }
