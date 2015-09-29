@@ -59,7 +59,7 @@ namespace NotePad_WPF {
         
         #line 14 "..\..\MainWindow.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
-        internal System.Windows.Controls.MenuItem MenutItem_SaveAs;
+        internal System.Windows.Controls.MenuItem MenuItem_Exit;
         
         #line default
         #line hidden
@@ -67,7 +67,7 @@ namespace NotePad_WPF {
         
         #line 15 "..\..\MainWindow.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
-        internal System.Windows.Controls.MenuItem MenuItem_Exit;
+        internal System.Windows.Controls.MenuItem MenutItem_SaveAs;
         
         #line default
         #line hidden
@@ -129,19 +129,19 @@ namespace NotePad_WPF {
             #line hidden
             return;
             case 3:
-            this.MenutItem_SaveAs = ((System.Windows.Controls.MenuItem)(target));
+            this.MenuItem_Exit = ((System.Windows.Controls.MenuItem)(target));
             
             #line 14 "..\..\MainWindow.xaml"
-            this.MenutItem_SaveAs.Click += new System.Windows.RoutedEventHandler(this.MenutItem_SaveAs_Click);
+            this.MenuItem_Exit.Click += new System.Windows.RoutedEventHandler(this.MenuItem_Exit_Click);
             
             #line default
             #line hidden
             return;
             case 4:
-            this.MenuItem_Exit = ((System.Windows.Controls.MenuItem)(target));
+            this.MenutItem_SaveAs = ((System.Windows.Controls.MenuItem)(target));
             
             #line 15 "..\..\MainWindow.xaml"
-            this.MenuItem_Exit.Click += new System.Windows.RoutedEventHandler(this.MenuItem_Exit_Click);
+            this.MenutItem_SaveAs.Click += new System.Windows.RoutedEventHandler(this.MenutItem_SaveAs_Click);
             
             #line default
             #line hidden
