@@ -9,13 +9,14 @@
     <Grid>
         <Menu Background="CornflowerBlue">
             <MenuItem Header="File">
-                <MenuItem x:Name="MenuItem_Open" Header="Open" Click="MenuItem_Open_Click"/>
+                <MenuItem x:Name="MenuItem_New" Header="New" Click="MenuItem_New_Click"/>
+                <MenuItem x:Name="MenuItem_Open" Header="Open..." Click="MenuItem_Open_Click"/>
                 <MenuItem x:Name="MenuItem_Save" Header="Save" Click="MenuItem_Save_Click"/>
-                <MenuItem x:Name="MenuItem_Exit" Header="Exit" Click="MenuItem_Exit_Click"/>
                 <MenuItem x:Name="MenutItem_SaveAs" Header="Save As..." Click="MenutItem_SaveAs_Click"/>
-                </MenuItem>
+                <MenuItem x:Name="MenuItem_Exit" Header="Exit" Click="MenuItem_Exit_Click"/>
+         </MenuItem>
         </Menu>
-        <TextBox Name="TextBox_Editor" Margin="0,18,0,0" TextChanged="TextBox_TextChanged" />
+        <TextBox Name="TextBox_Editor" Margin="0,18,0,0" AcceptsReturn="True" AcceptsTab="True" AutoWordSelection="True" />
 
     </Grid>
 </Window>

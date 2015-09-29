@@ -22,10 +22,16 @@ namespace NotePad_WPF
     /// </summary>
     public partial class MainWindow : Window
     {
+        public string fileName = "";
+        public string defaultFileName = "Untitled";
+
+
         public MainWindow()
         {
             InitializeComponent();
+
         }
+        
 
         private void MenuItem_Open_Click(object sender, RoutedEventArgs e)
         {
@@ -33,10 +39,10 @@ namespace NotePad_WPF
 
             bool? openFile = dialog.ShowDialog();
 
-            if(openFile == true)
+            if (openFile == true)
             {
                 //Get the name of the file selected by the user
-                string fileName =dialog.FileName;
+                fileName = dialog.FileName;
 
                 //Open the file and read the contents into a string
                 string fileContents = File.ReadAllText(fileName);
@@ -50,28 +56,99 @@ namespace NotePad_WPF
 
         }
 
+        //Save Button
         private void MenuItem_Save_Click(object sender, RoutedEventArgs e)
         {
+            if (fileName == "")
+            {
+                openSaveAs();
+
+            }
+
+           //check contents of fileName
+           string fileNameContents = File.ReadAllText(fileName);
+
+            //Check contents of TextBox_Editor
+            string TextBoxEditorFiles = TextBox_Editor.Text;
 
 
+            //Compare fileName Contents and TextBox_Editor
+            if(fileNameContents == TextBoxEditorFiles)
+            {
+                //If equal || Return
+                return;
+            }
+
+            //If not equal, save TextBoxEditor Content
+            File.WriteAllText(fileName, TextBox_Editor.Text);
 
 
 
 
         }
 
+        //Exit Button
         private void MenuItem_Exit_Click(object sender, RoutedEventArgs e)
         {
+            MessageBoxResult result = MessageBox.Show("Are you sure you want to exit? Ensure your file is saved.", "Important Alert", MessageBoxButton.YesNo);
+
+            if (result == MessageBoxResult.Yes)
+            {
+                Environment.Exit(0);
+
+            }
 
         }
 
-        private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
-        {
 
-        }
-
+        //Save As
         private void MenutItem_SaveAs_Click(object sender, RoutedEventArgs e)
         {
+            openSaveAs();
+        }
+
+        //Create a new file
+        private void MenuItem_New_Click(object sender, RoutedEventArgs e)
+        {
+
+            MessageBoxResult result = MessageBox.Show("Are you sure you want to create a file? Any unsaved work will be lost.", "Important Alert", MessageBoxButton.YesNo);
+
+
+            if (result == MessageBoxResult.Yes)
+            {
+                TextBox_Editor.Clear();
+
+            }
+
+
+        }
+        public void openSaveAs()
+        {
+               //Opens Save file dialog box
+               SaveFileDialog saveFileDialog1 = new SaveFileDialog();
+
+            //Only allows .txt files to be saved
+            saveFileDialog1.Filter = "Text Files|*.txt";
+
+            //Users decision to act with SaveDialog
+            bool? saveFileAs = saveFileDialog1.ShowDialog();
+           
+
+            //If user does press save
+            if (saveFileAs == true)
+            {
+                //File Name of user choice
+                string fileNameNew = saveFileDialog1.FileName;
+
+                //Rename FileName
+                fileName = fileNameNew;
+
+                //Writes the text to the file
+                File.WriteAllText(fileNameNew, TextBox_Editor.Text);
+
+            }
+            //If user decides not to save, do nothing.
+            return;
 
         }
     }

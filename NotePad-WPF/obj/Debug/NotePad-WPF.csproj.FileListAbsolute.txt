@@ -15,3 +15,14 @@ C:\Users\jward01\Documents\Visual Studio 2015\Projects\NotePad-WPF\NotePad-WPF\o
 C:\Users\jward01\Documents\Visual Studio 2015\Projects\NotePade-WPF\07-Notepad\NotePad-WPF\bin\Debug\NotePad-WPF.exe.config
 C:\Users\jward01\Documents\Visual Studio 2015\Projects\NotePade-WPF\07-Notepad\NotePad-WPF\obj\Debug\NotePad-WPF.exe
 C:\Users\jward01\Documents\Visual Studio 2015\Projects\NotePade-WPF\07-Notepad\NotePad-WPF\obj\Debug\NotePad-WPF.pdb
+C:\Users\jward01\Documents\Visual Studio 2015\Projects\NotePade-WPF\07-Notepad\NotePad-WPF\bin\Debug\NotePad-WPF.exe
+C:\Users\jward01\Documents\Visual Studio 2015\Projects\NotePade-WPF\07-Notepad\NotePad-WPF\bin\Debug\NotePad-WPF.pdb
+C:\Users\jward01\Documents\Visual Studio 2015\Projects\NotePade-WPF\07-Notepad\NotePad-WPF\obj\Debug\NotePad-WPF.csprojResolveAssemblyReference.cache
+C:\Users\jward01\Documents\Visual Studio 2015\Projects\NotePade-WPF\07-Notepad\NotePad-WPF\obj\Debug\MainWindow.g.cs
+C:\Users\jward01\Documents\Visual Studio 2015\Projects\NotePade-WPF\07-Notepad\NotePad-WPF\obj\Debug\App.g.cs
+C:\Users\jward01\Documents\Visual Studio 2015\Projects\NotePade-WPF\07-Notepad\NotePad-WPF\obj\Debug\NotePad-WPF_MarkupCompile.cache
+C:\Users\jward01\Documents\Visual Studio 2015\Projects\NotePade-WPF\07-Notepad\NotePad-WPF\obj\Debug\NotePad-WPF_MarkupCompile.lref
+C:\Users\jward01\Documents\Visual Studio 2015\Projects\NotePade-WPF\07-Notepad\NotePad-WPF\obj\Debug\MainWindow.baml
+C:\Users\jward01\Documents\Visual Studio 2015\Projects\NotePade-WPF\07-Notepad\NotePad-WPF\obj\Debug\NotePad-WPF.g.resources
+C:\Users\jward01\Documents\Visual Studio 2015\Projects\NotePade-WPF\07-Notepad\NotePad-WPF\obj\Debug\NotePad_WPF.Properties.Resources.resources
+C:\Users\jward01\Documents\Visual Studio 2015\Projects\NotePade-WPF\07-Notepad\NotePad-WPF\obj\Debug\NotePad-WPF.csproj.GenerateResource.Cache
