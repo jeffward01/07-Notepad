@@ -7,6 +7,14 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="350" Width="525">
     <Grid>
-        
+        <Menu Background="CornflowerBlue">
+            <MenuItem Header="File">
+                <MenuItem x:Name="MenuItem_Open" Header="Open" Click="MenuItem_Open_Click"/>
+                <MenuItem x:Name="MenuItem_Save" Header="Save" Click="MenuItem_Save_Click"/>
+                <MenuItem x:Name="MenuItem_Exit" Header="Exit" Click="MenuItem_Exit_Click"/>
+            </MenuItem>
+        </Menu>
+        <TextBox Name="TextBox_Editor" Margin="0,18,0,0" TextChanged="TextBox_TextChanged" />
+
     </Grid>
 </Window>

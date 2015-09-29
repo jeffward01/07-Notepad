@@ -1,5 +1,7 @@
-﻿using System;
+﻿using Microsoft.Win32;
+using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -23,6 +25,44 @@ namespace NotePad_WPF
         public MainWindow()
         {
             InitializeComponent();
+        }
+
+        private void MenuItem_Open_Click(object sender, RoutedEventArgs e)
+        {
+            OpenFileDialog dialog = new OpenFileDialog();
+
+            bool? openFile = dialog.ShowDialog();
+
+            if(openFile == true)
+            {
+                //Get the name of the file selected by the user
+                string fileName =dialog.FileName;
+
+                //Open the file and read the contents into a string
+                string fileContents = File.ReadAllText(fileName);
+
+                //Assign the contents of the file to the textvox created in WPF
+                TextBox_Editor.Text = fileContents;
+
+            }
+
+
+
+        }
+
+        private void MenuItem_Save_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void MenuItem_Exit_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
         }
     }
 }
