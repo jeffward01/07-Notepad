@@ -1,11 +1,13 @@
 ﻿using Microsoft.Win32;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
+using System.Windows.Forms;
 using System.Windows.Controls;
 using System.Windows.Data;
 using System.Windows.Documents;
@@ -32,7 +34,6 @@ namespace NotePad_WPF
 
         }
         
-
         private void MenuItem_Open_Click(object sender, RoutedEventArgs e)
         {
             OpenFileDialog dialog = new OpenFileDialog();
@@ -150,6 +151,35 @@ namespace NotePad_WPF
             //If user decides not to save, do nothing.
             return;
 
+        }
+
+        //Print Function
+        private void MenuItem_Print_Click(object sender, RoutedEventArgs e)
+        {
+            SendToPrinter();
+        }
+        //print Method
+        private void SendToPrinter()
+        {
+            try
+            {
+                PrintDialog printDialog = new PrintDialog();
+                printDialog.ShowDialog();
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("An error has occured, please speak to your systems admin");
+            }
+        }
+
+        private void MenuItem_PrintPreview_Click(object sender, RoutedEventArgs e)
+        {
+            PrintDocument pd = new PrintDocument();
+            pd.PrintPage += new PrintPageEventHandler(this.pd_PrintPage);
+
+            PrintDialog printdlg = new PrintDialog();
+
+            PrintPreviewDialog printPreviewDialog = new PrintPreviewDialog();
         }
     }
 }

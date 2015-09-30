@@ -13,10 +13,12 @@
                 <MenuItem x:Name="MenuItem_Open" Header="Open..." Click="MenuItem_Open_Click"/>
                 <MenuItem x:Name="MenuItem_Save" Header="Save" Click="MenuItem_Save_Click"/>
                 <MenuItem x:Name="MenutItem_SaveAs" Header="Save As..." Click="MenutItem_SaveAs_Click"/>
+                <MenuItem x:Name="MenuItem_PrintPreview" Header="Print Preview..." Click="MenuItem_PrintPreview_Click"/>
+                <MenuItem x:Name="MenuItem_Print" Header="Print" Click="MenuItem_Print_Click"/>
                 <MenuItem x:Name="MenuItem_Exit" Header="Exit" Click="MenuItem_Exit_Click"/>
          </MenuItem>
         </Menu>
-        <TextBox Name="TextBox_Editor" Margin="0,18,0,0" AcceptsReturn="True" AcceptsTab="True" AutoWordSelection="True" />
+        <TextBox Name="TextBox_Editor" Margin="0,18,0,0" AcceptsReturn="True" AcceptsTab="True" AutoWordSelection="True" ScrollViewer.CanContentScroll="True" />
 
     </Grid>
 </Window>
